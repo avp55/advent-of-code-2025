@@ -92,9 +92,7 @@ def part2():
 
     @lru_cache
     def dfs(x, y):
-        if x >= len(grid):
-            return 0
-        if y >= len(grid[0]):
+        if x >= len(grid) or y >= len(grid[0]) or y < 0:
             return 0
         nx, ny = x + 1, y
         if nx >= len(grid):
